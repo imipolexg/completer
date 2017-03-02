@@ -1,6 +1,6 @@
 {
   "name": "trie-completer",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A trie-based autocompleter",
   "main": "trie-completer.js",
   "scripts": {
