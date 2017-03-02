@@ -1,0 +1,23 @@
+{
+  "name": "completer",
+  "version": "0.0.1",
+  "description": "A trie-based autocompleter",
+  "main": "completer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/imipolexg/completer.git"
+  },
+  "keywords": [
+    "autocomplete",
+    "completion"
+  ],
+  "author": "Zachary Hamm <hamm.zachary@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/imipolexg/completer/issues"
+  },
+  "homepage": "https://github.com/imipolexg/completer#readme"
+}
