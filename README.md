@@ -6,7 +6,7 @@ array of completions itself.
 
 Construct with an array of strings:
 
-    const Completer = require('completer');
+    const Completer = require('trie-completer');
 
     let completer = new Completer([
         'a', 'aa', 'aaab', 'abc', 'def'
