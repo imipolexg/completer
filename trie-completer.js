@@ -83,27 +83,31 @@ module.exports = function (completions) {
     this.root = _put(this.root, completion, 0);
   };
 
-  let collectCompletions = function (node, prefix, completions) {
+  let collectCompletions = function (node, prefix, completions, limit) {
+    if (limit && completions.length == limit) {
+      return;
+    }
+
     if (node.isCompletion) {
       completions.push(prefix+node.c);
     }
 
     if (node.left) {
-      collectCompletions(node.left, prefix, completions);
+      collectCompletions(node.left, prefix, completions, limit);
     }
 
     if (node.mid) {
-      collectCompletions(node.mid, prefix+node.c, completions);
+      collectCompletions(node.mid, prefix+node.c, completions, limit);
     }
 
     if (node.right) {
-      collectCompletions(node.right, prefix, completions);
+      collectCompletions(node.right, prefix, completions, limit);
     }
   };
 
-  this.getCompletions = function(prefix) {
+  this.getCompletions = function(prefix, limit) {
     let completions = [];
-    if (!prefix ) {
+    if (!prefix) {
       return completions;
     }
 
@@ -119,7 +123,8 @@ module.exports = function (completions) {
     if (!prefixNode.mid) {
       return completions;
     }
-    collectCompletions(prefixNode.mid, prefix, completions);
+
+    collectCompletions(prefixNode.mid, prefix, completions, limit);
 
     return completions;
   };
