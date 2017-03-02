@@ -1,8 +1,8 @@
 {
-  "name": "completer",
+  "name": "trie-completer",
   "version": "0.0.1",
   "description": "A trie-based autocompleter",
-  "main": "completer.js",
+  "main": "trie-completer.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
